@@ -1,12 +1,11 @@
 package pl.kognitywistyka.ppa202101.backend;
 
-import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.Scene;
-import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
-public class SampleController {
+public class OtherController {
 	
 	protected Scene otherScene;
 	protected Stage mainStage;
@@ -25,12 +24,6 @@ public class SampleController {
 
 	public void setOtherScene(Scene otherScene) {
 		this.otherScene = otherScene;
-	}
-
-	@FXML TextArea textArea;
-
-	@FXML public void about(ActionEvent event) {
-		textArea.textProperty().set("You clicked on 'About'");
 	}
 
 	@FXML public void podmianka(ActionEvent event) {
