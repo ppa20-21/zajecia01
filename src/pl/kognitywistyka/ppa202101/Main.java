@@ -12,23 +12,28 @@ import pl.kognitywistyka.ppa202101.backend.SampleController;
  * @author Piotr Wilkin
  */
 public class Main extends Application {
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
 			FXMLLoader firstSceneLoader = new FXMLLoader(getClass().getResource("Sample.fxml"));
-			FXMLLoader secondSceneLoader = new FXMLLoader(getClass().getResource("Other.fxml"));
 			BorderPane firstSceneRoot = (BorderPane) firstSceneLoader.load();
 			SampleController firstSceneController = firstSceneLoader.getController();
-			firstSceneController.setMainStage(primaryStage);
+			Scene firstScene = new Scene(firstSceneRoot, 400, 400);
+			
+			FXMLLoader secondSceneLoader = new FXMLLoader(getClass().getResource("Other.fxml"));
 			BorderPane secondSceneRoot = (BorderPane) secondSceneLoader.load();
 			OtherController secondSceneController = secondSceneLoader.getController();
-			secondSceneController.setMainStage(primaryStage);
-			Scene firstScene = new Scene(firstSceneRoot, 400, 400);
-			firstScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			Scene secondScene = new Scene(secondSceneRoot, 400, 400);
-			secondScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			
+			firstSceneController.setMainStage(primaryStage);
+			firstScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			firstSceneController.setOtherScene(secondScene);
+
+			secondSceneController.setMainStage(primaryStage);
+			secondScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			secondSceneController.setOtherScene(firstScene);
+			
 			primaryStage.setScene(firstScene);
 			primaryStage.show();
 		} catch(Exception e) {
