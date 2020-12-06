@@ -1,19 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 
-
-<BorderPane fx:controller="pl.kognitywistyka.ppa202101.backend.OtherController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="798.0" prefWidth="1337.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.kognitywistyka.ppa202101.backend.OtherController">
    <top>
       <Label text="Góra" BorderPane.alignment="CENTER" />
    </top>
    <center>
-      <TextArea prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <TextArea prefHeight="298.0" prefWidth="980.0" />
+            <TreeTableView prefHeight="334.0" prefWidth="980.0">
+              <columns>
+                <TreeTableColumn prefWidth="139.0" text="Rok urodzenia" />
+                <TreeTableColumn prefWidth="160.0" text="Imie i nazwisko" />
+              </columns>
+            </TreeTableView>
+            <TableView prefHeight="421.0" prefWidth="980.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Imie" />
+                <TableColumn prefWidth="75.0" text="Nazwisko" />
+                  <TableColumn prefWidth="75.0" text="Wiek" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
    </center>
    <bottom>
       <Button mnemonicParsing="false" onAction="#podmianka" text="Podmianka" BorderPane.alignment="CENTER" />
    </bottom>
+   <left>
+      <VBox prefHeight="622.0" prefWidth="307.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" text="Button" />
+            <CheckBox mnemonicParsing="false" text="CheckBox" />
+            <ChoiceBox prefWidth="150.0" />
+            <ComboBox prefWidth="150.0" />
+            <ColorPicker />
+            <DatePicker />
+            <Hyperlink text="Hyperlink" />
+            <ImageView fitHeight="43.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
+            <Label text="Label" />
+            <ListView prefHeight="71.0" prefWidth="307.0" />
+            <PasswordField text="asdfsdaf" />
+            <ProgressBar prefWidth="200.0" progress="0.0" />
+            <ProgressIndicator progress="0.0" />
+            <RadioButton mnemonicParsing="false" text="RadioButton" />
+            <RadioButton mnemonicParsing="false" text="RadioButton" />
+            <Spinner />
+            <TextField text="asdfasdf" />
+            <ToggleButton mnemonicParsing="false" text="ToggleButton" />
+            <TreeView prefHeight="86.0" prefWidth="307.0" />
+         </children>
+      </VBox>
+   </left>
 </BorderPane>
